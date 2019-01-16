@@ -7,12 +7,12 @@
     >
 
     <CheckBox
+        android:id="@+id/todo_row_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/todo_row_checkbox"
-        android:paddingEnd="20dp"
+        android:layout_alignParentStart="true"
         android:focusable="false"
-        android:layout_alignParentStart="true"/>
+        android:paddingEnd="20dp" />
 
     <TextView
         android:id="@+id/todo_row_title"
