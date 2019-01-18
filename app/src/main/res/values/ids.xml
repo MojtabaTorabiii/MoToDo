@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="textInputLayoutName" type="id" />
+    <item name="textInputLayoutConfirmPassword" type="id" />
+    <item name="textInputEditTextName" type="id" />
+    <item name="textInputEditTextConfirmPassword" type="id" />
+    <item name="appCompatButtonRegister" type="id" />
+    <item name="appCompatTextViewLoginLink" type="id" />
+    <item name="nestedScrollView" type="id" />
+    <item name="textInputLayoutEmail" type="id" />
+    <item name="textInputLayoutPassword" type="id" />
+    <item name="textInputEditTextEmail" type="id" />
+    <item name="textInputEditTextPassword" type="id" />
+    <item name="appCompatButtonLogin" type="id" />
+    <item name="textViewLinkRegister" type="id" />
+</resources>
