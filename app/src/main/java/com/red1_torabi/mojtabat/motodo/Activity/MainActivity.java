@@ -1,7 +1,7 @@
-package com.red1_torabi.mojtabat.motodo;
+package com.red1_torabi.mojtabat.motodo.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -17,6 +17,7 @@ import android.view.MenuItem;
 
 import com.red1_torabi.mojtabat.motodo.Adapters.TodoRecyclerAdapter;
 import com.red1_torabi.mojtabat.motodo.Model.Todo;
+import com.red1_torabi.mojtabat.motodo.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,8 +36,9 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+              /*  Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();*/
+              startActivity(new Intent(MainActivity.this,RegisterActivity.class));
             }
         });
 

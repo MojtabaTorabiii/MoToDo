@@ -2,9 +2,6 @@ package com.red1_torabi.mojtabat.motodo.Model;
 
 import android.graphics.Color;
 
-
-import com.red1_torabi.mojtabat.motodo.MainActivity;
-
 public enum Priority {
     LOW("low", 2, Color.rgb(204, 214, 0)),
     MEDIUM("medium", 1, Color.rgb(255, 170, 0)),

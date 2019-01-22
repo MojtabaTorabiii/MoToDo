@@ -1,13 +1,15 @@
-package com.red1_torabi.mojtabat.motodo;
+package com.red1_torabi.mojtabat.motodo.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Todo extends AppCompatActivity {
+import com.red1_torabi.mojtabat.motodo.R;
+
+public class NewItem extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_todo);
+        setContentView(R.layout.activity_new_item);
     }
 }
