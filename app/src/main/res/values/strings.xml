@@ -27,7 +27,18 @@
     <string name="text_hello">Hello,</string>
     <string name="text_title">Android Tutorials Hub</string>
     <string name="todo">TODO</string>
-
+    <string name="mic_image" />
+    <string name="due_date" />
+    <string name="date_not_set" />
+    <string name="click_to_set_date" />
+    <string name="cancel_date" />
+    <string name="time_not_set" />
+    <string name="click_to_set_time" />
+    <string name="cancel_time" />
+    <string name="enter_priority" />
+    <string name="priority_prompt" />
+    <string name="task_to_be_done" />
+    <string name="enter_task_here" />
 
 
 </resources>

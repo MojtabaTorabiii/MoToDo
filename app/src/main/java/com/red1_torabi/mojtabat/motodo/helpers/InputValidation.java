@@ -11,9 +11,6 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 
 
-
-
-
 public class InputValidation {
     private Context context;
 

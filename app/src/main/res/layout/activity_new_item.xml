@@ -15,7 +15,7 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         tools:context=".activities.NewItem">
 
-       <!-- <TextView
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/task_to_be_done"
@@ -164,7 +164,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="20dp"
             android:prompt="@string/priority_prompt"
-            android:spinnerMode="dropdown" />-->
+            android:spinnerMode="dropdown" />
 
     </RelativeLayout>
 </ScrollView>
