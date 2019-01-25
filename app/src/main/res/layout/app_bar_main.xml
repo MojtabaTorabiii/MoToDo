@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity.MainActivity"
+    android:background="@color/colorBackground"
     >
 
     <android.support.design.widget.AppBarLayout
@@ -30,7 +31,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         android:src="@android:drawable/ic_input_add"
-        android:tint="@color/colorPrimary"
-        app:backgroundTint="@color/colorBackground" />
+        android:tint="@color/colorBackground"
+        app:backgroundTint="@color/colorPrimary" />
 
 </android.support.design.widget.CoordinatorLayout>

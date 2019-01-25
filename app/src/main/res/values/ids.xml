@@ -14,4 +14,5 @@
     <item name="appCompatButtonLogin" type="id" />
     <item name="textViewLinkRegister" type="id" />
     <item name="appCompatButtonLogin1" type="id" />
+    <item name="textInputLayoutUserName" type="id" />
 </resources>

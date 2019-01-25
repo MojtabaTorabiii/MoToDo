@@ -12,6 +12,14 @@ import android.view.View;
 
 import com.red1_torabi.mojtabat.motodo.R;
 import com.red1_torabi.mojtabat.motodo.helpers.InputValidation;
+import com.red1_torabi.mojtabat.objectsrepos.Message;
+import com.red1_torabi.mojtabat.objectsrepos.User;
+
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.net.Socket;
+import java.net.UnknownHostException;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     private final AppCompatActivity activity = LoginActivity.this;
@@ -87,11 +95,74 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.appCompatButtonLogin:
+                new Thread(new LoginActivity.SendDataToServer()).start();
+                //Intent intentMainActivity = new Intent(getApplicationContext(), MainActivity.class);
+                //startActivity(intentMainActivity);
+                //Intent intentMain = new Intent(getApplicationContext(), MainActivity.class);
+                //startActivity(intentMain);
                 break;
             case R.id.textViewLinkRegister:
                 Intent intentRegister = new Intent(getApplicationContext(), RegisterActivity.class);
                 startActivity(intentRegister);
                 break;
+        }
+    }
+
+    class SendDataToServer implements Runnable {
+        @Override
+        public void run() {
+            try {
+
+                Socket socket = new Socket("10.0.2.2", 8090);
+
+                ObjectOutputStream os = new ObjectOutputStream(socket.getOutputStream());
+
+                int messageType = 0;
+                User user = new User(0, null, null,
+                        null, textInputLayoutEmail.getEditText().getText().toString(),
+                        textInputEditTextPassword.getText().toString(), null, false);
+                Message message = new Message(user, null, 0, 0);
+                os.writeObject(message);
+                os.flush();
+                //message.setMessageType(4);
+                ObjectInputStream is = new ObjectInputStream(socket.getInputStream());
+                Message returnMessage = (Message) is.readObject();
+                Intent intentMainActivity;
+                switch (returnMessage.getMessageType()) {
+                    case 1:
+                        intentMainActivity = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intentMainActivity);
+                        break;
+                    case 4:
+                        textInputEditTextEmail.setError("User password not correct.");
+
+                        break;
+                    case 5:
+                        textInputLayoutEmail.setError("User not found.");
+                        break;
+                    default:
+                        if (returnMessage.getMessageType() < 4) {
+                            intentMainActivity = new Intent(getApplicationContext(), MainActivity.class);
+                            startActivity(intentMainActivity);
+                        }
+                        break;
+                }
+                System.out.println("return Message is=" + returnMessage);
+                //socket.close();
+            } catch (UnknownHostException e1) {
+
+                e1.printStackTrace();
+
+            } catch (IOException e1) {
+
+                e1.printStackTrace();
+
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }/**/ catch (Exception exce) {
+                exce.printStackTrace();
+            }
+
         }
     }
     /**
@@ -101,4 +172,71 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         textInputEditTextEmail.setText(null);
         textInputEditTextPassword.setText(null);
     }
+
+
+
+    private void sendtd(){
+        try {
+
+            Socket socket = new Socket("10.0.2.2", 8090);
+
+            ObjectOutputStream os = new ObjectOutputStream(socket.getOutputStream());
+
+            int messageType = 0;
+            User user = new User(0, null, null,
+                    null, textInputLayoutEmail.getEditText().getText().toString(),
+                    textInputEditTextPassword.getText().toString(), null, false);
+            Message message = new Message(user, null, 0, 0);
+            os.writeObject(message);
+            os.flush();
+            //message.setMessageType(4);
+            ObjectInputStream is = new ObjectInputStream(socket.getInputStream());
+            Message returnMessage =(Message) is.readObject();
+            Intent intentMainActivity;
+            switch (returnMessage.getMessageType()) {
+                case 1:
+                    intentMainActivity = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intentMainActivity);
+                    break;
+                case 4:
+                    textInputEditTextEmail.setError("User password not correct.");
+
+                    break;
+                case 5:
+                    textInputLayoutEmail.setError("User not found.");
+                    break;
+                default:
+                    if (returnMessage.getMessageType() < 4) {
+                        intentMainActivity = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intentMainActivity);
+                    }
+                    break;
+            }
+            System.out.println("return Message is=" + returnMessage);
+            //socket.close();
+        } catch (UnknownHostException e1) {
+
+            e1.printStackTrace();
+
+        } catch (IOException e1) {
+
+            e1.printStackTrace();
+
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }/**/
+
+        catch (Exception exce) {
+            exce.printStackTrace();
+        }
+    }
+
+
+
+
+
+
+
 }
+
+

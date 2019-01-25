@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.red1_torabi.mojtabat.motodo">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,31 +13,29 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
+        <activity android:name=".Activity.NewTodo">
+        </activity>
         <activity android:name=".Activity.SplashScreenActivity" />
-        <activity android:name=".Activity.NewItem" />
+
         <activity
             android:name=".Activity.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activity.WelcomeActivity"
+        <activity
+            android:name=".Activity.WelcomeActivity"
             android:label="MOTODO"
             tools:ignore="DuplicateActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-            </activity>
-
+        </activity>
         <activity
             android:name=".Activity.LoginActivity"
-            android:label="login page">
+            android:label="login page"></activity>
 
-        </activity>
         <activity android:name=".Activity.RegisterActivity" />
     </application>
-<uses-permission android:name="android.permission.INTERNET"/>
+
 </manifest>

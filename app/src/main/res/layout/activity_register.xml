@@ -33,10 +33,10 @@
             android:layout_marginTop="8dp">
 
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/textInputEditTextConfirmPassword"
+                android:id="@+id/textInputEditTextUserName"
                 android:layout_width="match_parent"
                 android:layout_height="59dp"
-                android:hint="@string/hint_confirm_password"
+                android:hint="@string/hint_username"
                 android:inputType="text"
                 android:maxLines="1"
                 android:textColor="@android:color/black" />
@@ -110,7 +110,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="30dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/UserType">
 
                 <RadioButton
                     android:id="@+id/Gold"

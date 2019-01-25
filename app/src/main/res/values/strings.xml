@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">MoToDo</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -10,7 +10,6 @@
     <string name="hint_last_name">Family Name</string>
     <string name="hint_email">Email</string>
     <string name="hint_password">Password</string>
-    <string name="hint_confirm_password">User Name</string>
     <string name="text_login">Login</string>
     <string name="text_register">Register</string>
     <string name="error_message_name">Enter Full Name</string>
@@ -39,6 +38,15 @@
     <string name="priority_prompt" />
     <string name="task_to_be_done" />
     <string name="enter_task_here" />
+    <string name="hint_username">User Name</string>
+    <string name="title">Title</string>
+    <string name="hh_mm_dd_mm_yyyy">hh:mm dd/MM/yyyy</string>
+    <string name="enter_a_title">Enter a title</string>
+    <string name="enter_a_description">Enter a description</string>
+    <string name="due_time">Due-time</string>
+    <string name="cancel">Cancel</string>
+    <string name="create">Create</string>
+    <string name="description" tools:ignore="ExtraTranslation">Description</string>
 
 
 </resources>

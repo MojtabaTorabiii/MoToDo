@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_create"
+    android:layout_below="@+id/content_create"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.red1_torabi.mojtabat.motodo.Activity.NewTodo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <LinearLayout
+        android:id="@+id/firstLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:textColor="#01A3A3"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/fieldTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/enter_a_title"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/descTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/description"
+            android:textColor="#01A3A3"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/fieldDesc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:gravity="left"
+            android:hint="@string/enter_a_description"
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:maxLines="4" />
+
+        <TextView
+            android:id="@+id/duetimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/due_time"
+            android:textColor="#01A3A3"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/dateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/hh_mm_dd_mm_yyyy"
+            android:background="@color/colorTextHint"
+            android:textColor="@color/textColor1"/>
+
+
+
+        <Button
+            android:id="@+id/createButton"
+            android:layout_weight="1"
+            android:text="@string/create"
+            android:background="@color/colorTextHint"
+            android:textColor="@color/textColor1"
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="136dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="157dp"
+            android:layout_marginBottom="51dp"/>
+        <Button
+            android:id="@+id/cancelCreateButton"
+            android:layout_weight="1"
+            android:text="@string/cancel"
+            android:background="@color/colorTextHint"
+            android:textColor="@color/textColor1"
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="136dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="157dp"
+            android:layout_marginBottom="16dp"/>
+    </LinearLayout>
+
+</RelativeLayout>
