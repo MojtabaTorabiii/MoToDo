@@ -34,8 +34,8 @@
     <string name="time_not_set" />
     <string name="click_to_set_time" />
     <string name="cancel_time" />
-    <string name="enter_priority" />
-    <string name="priority_prompt" />
+    <string name="enter_priority">Enter priority</string>
+    <string name="priority_prompt">Priority</string>
     <string name="task_to_be_done" />
     <string name="enter_task_here" />
     <string name="hint_username">User Name</string>

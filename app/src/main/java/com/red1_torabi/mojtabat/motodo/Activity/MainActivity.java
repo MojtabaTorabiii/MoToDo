@@ -2,22 +2,23 @@ package com.red1_torabi.mojtabat.motodo.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.red1_torabi.mojtabat.motodo.Adapters.TodoRecyclerAdapter;
 import com.red1_torabi.mojtabat.motodo.Model.Todo;
 import com.red1_torabi.mojtabat.motodo.R;
+import com.red1_torabi.mojtabat.objectsrepos.Message;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,13 +32,17 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+      final   Message messagePassed = (Message)getIntent().getSerializableExtra("com.red1_torabi.mojtabat.objectsrepos.Message");
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("com.red1_torabi.mojtabat.objectsrepos.Message",messagePassed);
 
-              startActivity(new Intent(MainActivity.this,NewTodo.class));
+                Intent intent = new Intent(MainActivity.this,NewTodo.class);
+                intent.putExtras(bundle);
+              startActivity(intent);
             }
         });
 

@@ -20,7 +20,8 @@
         android:id="@+id/firstLinear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
         <TextView
             android:id="@+id/titleTextView"
@@ -52,7 +53,7 @@
         <EditText
             android:id="@+id/fieldDesc"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="41dp"
             android:layout_marginTop="16dp"
             android:autofillHints=""
             android:ems="10"
@@ -61,6 +62,30 @@
             android:inputType="textMultiLine"
             android:lines="4"
             android:maxLines="4" />
+
+        <TextView
+            android:id="@+id/Priority"
+            android:layout_width="208dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgTime"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="30dp"
+            android:text="@string/enter_priority"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Priority"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:entries="@array/spinnerItem"
+            android:prompt="@string/priority_prompt"
+            android:spinnerMode="dropdown" />
 
         <TextView
             android:id="@+id/duetimeTextView"
@@ -76,36 +101,38 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="@string/hh_mm_dd_mm_yyyy"
             android:background="@color/colorTextHint"
-            android:textColor="@color/textColor1"/>
-
+            android:text="@string/hh_mm_dd_mm_yyyy"
+            android:textColor="@color/textColor1" />
 
 
         <Button
             android:id="@+id/createButton"
-            android:layout_weight="1"
-            android:text="@string/create"
-            android:background="@color/colorTextHint"
-            android:textColor="@color/textColor1"
             android:layout_width="122dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="136dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="157dp"
-            android:layout_marginBottom="51dp"/>
+            android:layout_marginBottom="21dp"
+            android:layout_weight="1"
+            android:background="@color/colorTextHint"
+            android:text="@string/create"
+            android:textColor="@color/textColor1" />
+
         <Button
             android:id="@+id/cancelCreateButton"
-            android:layout_weight="1"
-            android:text="@string/cancel"
-            android:background="@color/colorTextHint"
-            android:textColor="@color/textColor1"
-            android:layout_width="122dp"
+            android:layout_width="124dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="136dp"
-            android:layout_marginTop="29dp"
+            android:layout_marginTop="19dp"
             android:layout_marginEnd="157dp"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:background="@color/colorTextHint"
+            android:padding="5sp"
+            android:text="@string/cancel"
+            android:textColor="@color/textColor1" />
+
     </LinearLayout>
 
 </RelativeLayout>

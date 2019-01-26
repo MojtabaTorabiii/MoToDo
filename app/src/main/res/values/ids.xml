@@ -15,4 +15,5 @@
     <item name="textViewLinkRegister" type="id" />
     <item name="appCompatButtonLogin1" type="id" />
     <item name="textInputLayoutUserName" type="id" />
+    <item name="Priority" type="id" />
 </resources>

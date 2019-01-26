@@ -128,9 +128,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 ObjectInputStream is = new ObjectInputStream(socket.getInputStream());
                 Message returnMessage = (Message) is.readObject();
                 Intent intentMainActivity;
+                Bundle bundle = new Bundle();
                 switch (returnMessage.getMessageType()) {
                     case 1:
                         intentMainActivity = new Intent(getApplicationContext(), MainActivity.class);
+                        bundle.putSerializable("com.red1_torabi.mojtabat.objectsrepos.Message",returnMessage);
+                        intentMainActivity.putExtras(bundle);
                         startActivity(intentMainActivity);
                         break;
                     case 4:
